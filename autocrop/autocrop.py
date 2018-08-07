@@ -72,6 +72,9 @@ def crop(image, fwidth=500, fheight=500):
     # Handle no faces
     if len(faces) == 0:
         return None
+      
+    if len(faces) > 1:
+        return None
 
     # Make padding from biggest face found
     x, y, w, h = faces[-1]
